@@ -1,0 +1,23 @@
+{
+  "name": "communication",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dixit199213bafna/Communication.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dixit199213bafna/Communication/issues"
+  },
+  "homepage": "https://github.com/Dixit199213bafna/Communication#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

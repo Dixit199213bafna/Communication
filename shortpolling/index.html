@@ -1,0 +1,33 @@
+<html>
+<head>
+    <h1>Short Polling</h1>
+</head>
+<body>
+        <p>Short Polling</p>
+        <div id="data-container">
+        </div>
+</body>
+
+<script>
+    async function getData () {
+        try {
+            const response = await fetch('/getData');
+            const { data } = await response.json();
+            document.getElementById('data-container').innerHTML = data;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    let intervalId;
+    function shortPolling() {
+        intervalId = setInterval(() => {
+            getData();
+        }, 5000);
+    }
+
+    shortPolling();
+
+    // We need to clear interval
+</script>
+</html>
