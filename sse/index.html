@@ -1,0 +1,21 @@
+<html>
+<head>
+    <h1>Server Side Events</h1>
+</head>
+<body>
+        <p>Server Side Events</p>
+        <div id="sse-data">
+        </div>
+</body>
+
+<script>
+   const eventSource = new EventSource('/sse');
+
+   eventSource.onmessage = function(event) {
+       console.log(event.data);
+       const divSee = document.getElementById('sse-data');
+       divSee.innerHTML += `<p>${event.data}</p>`;
+   }
+    // We need to clear interval
+</script>
+</html>
